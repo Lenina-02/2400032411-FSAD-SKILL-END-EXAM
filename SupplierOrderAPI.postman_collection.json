@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Supplier Order API",
+    "description": "Collection for testing Supplier Order Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add SupplierOrder (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"supplierOrderId\": 1001,\n  \"name\": \"Office Supplies Order\",\n  \"date\": \"2024-05-15\",\n  \"status\": \"Pending\",\n  \"amount\": 5000.00,\n  \"description\": \"Monthly office supplies procurement\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/supplier-orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "supplier-orders"]
+        }
+      }
+    },
+    {
+      "name": "Get All SupplierOrders (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/supplier-orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "supplier-orders"]
+        }
+      }
+    },
+    {
+      "name": "Get SupplierOrder by ID (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/supplier-orders/1001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "supplier-orders", "1001"]
+        }
+      }
+    },
+    {
+      "name": "Update SupplierOrder (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Office Supplies Order - Updated\",\n  \"date\": \"2024-05-15\",\n  \"status\": \"Completed\",\n  \"amount\": 5500.00,\n  \"description\": \"Monthly office supplies procurement - Delivered\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/supplier-orders/1001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "supplier-orders", "1001"]
+        }
+      }
+    },
+    {
+      "name": "Delete SupplierOrder (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/supplier-orders/1001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "supplier-orders", "1001"]
+        }
+      }
+    }
+  ]
+}
